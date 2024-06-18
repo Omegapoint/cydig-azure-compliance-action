@@ -24,7 +24,7 @@ export function isLocationAllowed(location: string[]): boolean {
   for (let index: number = 0; index < location.length; index++) {
     if (!allowedLocations.includes(location[index])) {
       console.log(
-        `${location[index]} is not in the list of allowed locations. Contact the CyDig team if the location is in Europe`
+        `${location[index]} is not in the list of allowed locations. Contact the CyDig team if the location is in Europe`,
       );
       policyValid = false;
     }

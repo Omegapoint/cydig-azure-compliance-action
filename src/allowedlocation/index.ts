@@ -14,12 +14,12 @@ export class AllowedLocation {
       policyService,
       policyInsightsClient,
       subscriptionId,
-      credentials
+      credentials,
     );
     const subscriptionAssignment: SubscriptionAssignment = new SubscriptionAssignment(
       policyService,
       policyInsightsClient,
-      subscriptionId
+      subscriptionId,
     );
 
     console.log('Getting policy assignments of allowed locations');
@@ -32,11 +32,11 @@ export class AllowedLocation {
       return;
     } else {
       const isSubscriptionLevelPolicyCheckPassed: boolean = await subscriptionAssignment.policyCheck(
-        allowedLocationPolicyAssignments
+        allowedLocationPolicyAssignments,
       );
 
       console.log(
-        `ALLOWED LOCATION POLICY IN PLACE WITH LOCATIONS ONLY IN EUROPE ON SUBSCRIPTION LEVEL: ${isSubscriptionLevelPolicyCheckPassed.toString()}`
+        `ALLOWED LOCATION POLICY IN PLACE WITH LOCATIONS ONLY IN EUROPE ON SUBSCRIPTION LEVEL: ${isSubscriptionLevelPolicyCheckPassed.toString()}`,
       );
       core.exportVariable('allowedLocationPolicy', isSubscriptionLevelPolicyCheckPassed.toString());
       return;

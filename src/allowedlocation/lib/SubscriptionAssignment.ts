@@ -52,7 +52,7 @@ export class SubscriptionAssignment {
       this.policyInsightClient.policyStates.listQueryResultsForSubscriptionLevelPolicyAssignment(
         'latest',
         this.subscriptionId,
-        allowedLocationPolicyEnabled[0].name
+        allowedLocationPolicyEnabled[0].name,
       );
 
     // eslint-disable-next-line

@@ -21,7 +21,7 @@ export class ManagementGroupAssignment {
     policyService: PolicyService,
     policyInsightClient: PolicyInsightsClient,
     subscriptionId: string,
-    credentials: TokenCredential
+    credentials: TokenCredential,
   ) {
     this.policyService = policyService;
     this.policyInsightClient = policyInsightClient;
@@ -64,7 +64,7 @@ export class ManagementGroupAssignment {
         queryOptions: {
           filter: `policyDefinitionName eq 'e56962a6-4747-49cd-b67b-bf8b01975c4c' and contains(resourceId,'/subscriptions/${managementGroupAllowedLocationPolicy[0].subscriptionId}')`,
         },
-      }
+      },
     );
 
     let numCompliantResources: number = 0;
@@ -73,7 +73,7 @@ export class ManagementGroupAssignment {
     result.value?.[0].policyAssignments?.forEach((policyAssignment: PolicyAssignmentSummary) => {
       if (
         policyAssignment.policyAssignmentId?.startsWith(
-          managementGroupAllowedLocationPolicy[0].managementGroup?.toLowerCase() as string
+          managementGroupAllowedLocationPolicy[0].managementGroup?.toLowerCase() as string,
         )
       ) {
         policyAssignment.results?.resourceDetails?.forEach((state: ComplianceDetail) => {
