@@ -18,15 +18,12 @@ export class UsersInProduction {
     const lowPrivRoleAssignments: RoleAssignment[] = await azureRoleService.getLowPrivRoleAssignments();
     const mediumPrivRoleAssignments: RoleAssignment[] = await azureRoleService.getMediumPrivRoleAssignments();
 
-    const numberOfHighPrivRoleAssignments: number = await azureRoleService.getNumberOfAssignments(
-      highPrivRoleAssignments
-    );
-    const numberOfMediumPrivRoleAssignments: number = await azureRoleService.getNumberOfAssignments(
-      mediumPrivRoleAssignments
-    );
-    const numberOfLowPrivRoleAssignments: number = await azureRoleService.getNumberOfAssignments(
-      lowPrivRoleAssignments
-    );
+    const numberOfHighPrivRoleAssignments: number =
+      await azureRoleService.getNumberOfAssignments(highPrivRoleAssignments);
+    const numberOfMediumPrivRoleAssignments: number =
+      await azureRoleService.getNumberOfAssignments(mediumPrivRoleAssignments);
+    const numberOfLowPrivRoleAssignments: number =
+      await azureRoleService.getNumberOfAssignments(lowPrivRoleAssignments);
 
     console.log(`Number of high privileged users in Azure: ${numberOfHighPrivRoleAssignments} `);
     await azureRoleService.printRoles(highPrivRoleAssignments);
@@ -48,7 +45,7 @@ export class UsersInProduction {
         2. Go to API permission and press Add a permission.
         3. Press Microsoft Graph --> Application permission.
         4. Choose the permission GroupMember.Read.All and press Add permission.
-        5. An admin of your Azure tenant must give admin consent in order for the permission to start working.`
+        5. An admin of your Azure tenant must give admin consent in order for the permission to start working.`,
       );
     } else {
       console.log(
@@ -58,7 +55,7 @@ export class UsersInProduction {
         2. Go to API permission and press Add a permission.
         3. Press Microsoft Graph --> Application permission.
         4. Choose the permission GroupMember.Read.All and press Add permission.
-        5. An admin of your Azure tenant must give admin consent in order for the permission to start working.`
+        5. An admin of your Azure tenant must give admin consent in order for the permission to start working.`,
       );
     }
     return;
