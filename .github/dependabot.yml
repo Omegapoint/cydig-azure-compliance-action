@@ -10,7 +10,7 @@ updates:
     schedule:
       interval: 'daily'
     labels:
-      - "skip-release"
+      - 'skip-release'
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: 'github-actions'
