@@ -9,6 +9,8 @@ updates:
     directory: '/' # Location of package manifests
     schedule:
       interval: 'daily'
+    labels:
+      - "skip-release"
 
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: 'github-actions'
