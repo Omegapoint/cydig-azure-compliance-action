@@ -19,4 +19,4 @@ updates:
     schedule:
       interval: 'daily'
     labels:
-      - 'patch'  
+      - 'patch'
