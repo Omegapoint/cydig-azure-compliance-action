@@ -12,20 +12,20 @@ import { CyDigConfig } from './types/CyDigConfig';
  * @returns {Promise<void>} Resolves when the action is complete.
  */
 export async function run(): Promise<void> {
-  try {
-    const cydigConfig: CyDigConfig = getContentOfFile(core.getInput('cydigConfigPath'));
-    if (cydigConfig.usingAzure) {
-      const credentials: DefaultAzureCredential = new DefaultAzureCredential();
-      const subscriptionId: string = core.getInput('subscription');
-      if (!subscriptionId) throw new Error('Could not get subscriptionId');
-      await SecureScore.getSecureScore(credentials, subscriptionId);
-      await DeployedVirtualMachines.getDeployedVirtualMachines(credentials, subscriptionId);
-      await AllowedLocation.getAllowedLocation(credentials, subscriptionId);
-      await UsersInProduction.getUsersInProduction(credentials, subscriptionId);
+    try {
+        const cydigConfig: CyDigConfig = getContentOfFile(core.getInput('cydigConfigPath'));
+        if (cydigConfig.usingAzure) {
+            const credentials: DefaultAzureCredential = new DefaultAzureCredential();
+            const subscriptionId: string = core.getInput('subscription');
+            if (!subscriptionId) throw new Error('Could not get subscriptionId');
+            await SecureScore.getSecureScore(credentials, subscriptionId);
+            await DeployedVirtualMachines.getDeployedVirtualMachines(credentials, subscriptionId);
+            await AllowedLocation.getAllowedLocation(credentials, subscriptionId);
+            await UsersInProduction.getUsersInProduction(credentials, subscriptionId);
+        }
+    } catch (error) {
+        core.setFailed(error.message);
     }
-  } catch (error) {
-    core.setFailed(error.message);
-  }
 }
 
 run();
