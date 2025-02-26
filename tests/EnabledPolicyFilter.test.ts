@@ -8,18 +8,18 @@ import * as testData from './TestData';
 chai.use(sinonChai);
 
 describe('Allowed Location Test', () => {
-  afterEach(() => {
-    sinon.restore();
-  });
+    afterEach(() => {
+        sinon.restore();
+    });
 
-  it('Should only returned enabled policies', () => {
-    const enabledPolicies: InfoPolicyType[] = enabledPolicyFilter(testData.policyTypes);
-    expect(enabledPolicies.every((x: InfoPolicyType) => x.enforcementMode == 'Enabled')).equal(true);
-  });
+    it('Should only returned enabled policies', () => {
+        const enabledPolicies: InfoPolicyType[] = enabledPolicyFilter(testData.policyTypes);
+        expect(enabledPolicies.every((x: InfoPolicyType) => x.enforcementMode == 'Enabled')).equal(true);
+    });
 
-  it('Should not returned disabled policies', () =>
-    expect(function () {
-      const enabledPolicies: InfoPolicyType[] = enabledPolicyFilter(testData.policyTypes);
-      expect(enabledPolicies.some((x: InfoPolicyType) => x.enforcementMode == 'DoNotEnforce')).equal(false);
-    }));
+    it('Should not returned disabled policies', () =>
+        expect(function () {
+            const enabledPolicies: InfoPolicyType[] = enabledPolicyFilter(testData.policyTypes);
+            expect(enabledPolicies.some((x: InfoPolicyType) => x.enforcementMode == 'DoNotEnforce')).equal(false);
+        }));
 });

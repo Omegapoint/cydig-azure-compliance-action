@@ -8,19 +8,19 @@ const enforcementModeOn: string = 'Enabled';
 const enforcementModeOff: string = 'DoNotEnforce';
 
 export const policyEnabled: InfoPolicyType = {
-  name: name,
-  subscriptionId: subscriptionId,
-  managementGroup: managementGroup,
-  allowedLocations: allowedLocations,
-  enforcementMode: enforcementModeOn,
+    name: name,
+    subscriptionId: subscriptionId,
+    managementGroup: managementGroup,
+    allowedLocations: allowedLocations,
+    enforcementMode: enforcementModeOn,
 };
 
 export const policyNotEnabled: InfoPolicyType = {
-  name: name,
-  subscriptionId: subscriptionId,
-  managementGroup: managementGroup,
-  allowedLocations: allowedLocations,
-  enforcementMode: enforcementModeOff,
+    name: name,
+    subscriptionId: subscriptionId,
+    managementGroup: managementGroup,
+    allowedLocations: allowedLocations,
+    enforcementMode: enforcementModeOff,
 };
 
 export const policyTypes: InfoPolicyType[] = [policyEnabled, policyNotEnabled];
