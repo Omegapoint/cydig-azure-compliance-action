@@ -13,6 +13,9 @@ updates:
       # OBS - For this to happen it also requires that a skip-release label is added on the repository level
       labels:
           - 'patch'
+      # Don't add auto-generated version labels (major, minor, patch) - use custom labels only
+      pull-request-branch-name:
+          separator: '/'
 
     # Maintain dependencies for GitHub Actions
     - package-ecosystem: 'github-actions'
@@ -24,3 +27,6 @@ updates:
       # OBS - For this to happen it also requires that a skip-release label is added on the repository level
       labels:
           - 'patch'
+      # Don't add auto-generated version labels (major, minor, patch) - use custom labels only
+      pull-request-branch-name:
+          separator: '/'
