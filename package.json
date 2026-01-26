@@ -1,68 +1,68 @@
 {
-  "name": "cydig-azure-tasks",
-  "description": "cydig azure tasks",
-  "version": "1.0.0",
-  "author": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Omegapoint/CydigAzureComplianceAction.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Omegapoint/CydigAzureComplianceAction/issues"
-  },
-  "keywords": [
-    "actions",
-    "node",
-    "setup"
-  ],
-  "exports": {
-    ".": "./dist/index.js"
-  },
-  "engines": {
-    "node": ">=16"
-  },
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "ncc build src/index.ts",
-    "test": "tsc && mocha dist/tests/",
-    "testScript": "tsc && mocha dist/tests/ --reporter xunit --reporter-option output=ResultsFile.xml",
-    "prepare": "husky",
-    "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix",
-    "format:write": "npx prettier -w .",
-    "format:check": "npx prettier -c ."
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@actions/core": "^2.0.0",
-    "@azure/arm-authorization": "^9.0.0",
-    "@azure/arm-compute": "^23.2.0",
-    "@azure/arm-policy": "^6.0.0",
-    "@azure/arm-policyinsights": "^5.0.0",
-    "@azure/arm-security": "^5.0.0",
-    "@azure/identity": "^4.7.0",
-    "@microsoft/microsoft-graph-client": "^3.0.7",
-    "@vercel/ncc": "^0.38.3",
-    "isomorphic-fetch": "^3.0.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.39.2",
-    "@types/chai": "^5.2.3",
-    "@types/isomorphic-fetch": "^0.0.39",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "^25.0.0",
-    "@types/sinon": "^21.0.0",
-    "@types/sinon-chai": "^4.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.26.0",
-    "@typescript-eslint/parser": "^8.26.0",
-    "chai": "^6.2.2",
-    "eslint": "^9.39.2",
-    "husky": "^9.1.7",
-    "mocha": "^11.1.0",
-    "prettier": "^3.5.3",
-    "sinon": "^21.0.0",
-    "sinon-chai": "^4.0.1",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.1"
-  }
+    "name": "cydig-azure-tasks",
+    "description": "cydig azure tasks",
+    "version": "1.0.0",
+    "author": "",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Omegapoint/CydigAzureComplianceAction.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Omegapoint/CydigAzureComplianceAction/issues"
+    },
+    "keywords": [
+        "actions",
+        "node",
+        "setup"
+    ],
+    "exports": {
+        ".": "./dist/index.js"
+    },
+    "engines": {
+        "node": ">=16"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "ncc build src/index.ts",
+        "test": "tsc && mocha dist/tests/",
+        "testScript": "tsc && mocha dist/tests/ --reporter xunit --reporter-option output=ResultsFile.xml",
+        "prepare": "husky",
+        "lint": "npx eslint .",
+        "lint:fix": "npx eslint . --fix",
+        "format:write": "npx prettier -w .",
+        "format:check": "npx prettier -c ."
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@actions/core": "^2.0.0",
+        "@azure/arm-authorization": "^9.0.0",
+        "@azure/arm-compute": "^23.2.0",
+        "@azure/arm-policy": "^6.0.0",
+        "@azure/arm-policyinsights": "^5.0.0",
+        "@azure/arm-security": "^5.0.0",
+        "@azure/identity": "^4.7.0",
+        "@microsoft/microsoft-graph-client": "^3.0.7",
+        "@vercel/ncc": "^0.38.3",
+        "isomorphic-fetch": "^3.0.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.39.2",
+        "@types/chai": "^5.2.3",
+        "@types/isomorphic-fetch": "^0.0.39",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^25.0.0",
+        "@types/sinon": "^21.0.0",
+        "@types/sinon-chai": "^4.0.0",
+        "@typescript-eslint/eslint-plugin": "^8.26.0",
+        "@typescript-eslint/parser": "^8.26.0",
+        "chai": "^6.2.2",
+        "eslint": "^9.39.2",
+        "husky": "^9.1.7",
+        "mocha": "^11.1.0",
+        "prettier": "^3.5.3",
+        "sinon": "^21.0.0",
+        "sinon-chai": "^4.0.1",
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.53.1"
+    }
 }
