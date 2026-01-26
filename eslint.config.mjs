@@ -1,10 +1,14 @@
-/* eslint-env node */
-module.exports = {
-    extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
-    parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint'],
-    root: true,
-    ignorePatterns: ['node_modules', 'test', 'dist', 'func'],
+// @ts-check
+
+import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
+import tseslint from 'typescript-eslint';
+
+export default defineConfig([
+  eslint.configs.recommended,
+  tseslint.configs.recommended,
+  {ignores: ['node_modules', 'test', 'dist', 'func']},
+  {
     rules: {
         '@typescript-eslint/explicit-function-return-type': 'warn',
         '@typescript-eslint/no-inferrable-types': 0,
@@ -20,4 +24,6 @@ module.exports = {
             },
         ],
     },
-};
+}
+]
+);
