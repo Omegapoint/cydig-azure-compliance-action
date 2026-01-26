@@ -26,9 +26,9 @@
         "build": "ncc build src/index.ts",
         "test": "tsc && mocha dist/tests/",
         "testScript": "tsc && mocha dist/tests/ --reporter xunit --reporter-option output=ResultsFile.xml",
-        "prepare": "husky install",
-        "lint": "eslint . --ext .ts",
-        "lint:fix": "eslint . --fix --ext .ts",
+        "prepare": "husky",
+        "lint": "npx eslint .",
+        "lint:fix": "npx eslint . --fix",
         "format:write": "npx prettier -w .",
         "format:check": "npx prettier -c ."
     },
@@ -46,6 +46,7 @@
         "isomorphic-fetch": "^3.0.0"
     },
     "devDependencies": {
+        "@eslint/js": "^9.39.2",
         "@types/chai": "^5.2.3",
         "@types/isomorphic-fetch": "^0.0.39",
         "@types/mocha": "^10.0.10",
@@ -55,12 +56,13 @@
         "@typescript-eslint/eslint-plugin": "^8.26.0",
         "@typescript-eslint/parser": "^8.26.0",
         "chai": "^6.2.2",
-        "eslint": "^8.57.1",
+        "eslint": "^9.39.2",
         "husky": "^9.1.7",
         "mocha": "^11.1.0",
         "prettier": "^3.5.3",
         "sinon": "^21.0.0",
         "sinon-chai": "^4.0.1",
-        "typescript": "^5.8.2"
+        "typescript": "^5.9.3",
+        "typescript-eslint": "^8.53.1"
     }
 }
