@@ -46,7 +46,7 @@
         "isomorphic-fetch": "^3.0.0"
     },
     "devDependencies": {
-        "@eslint/js": "^9.39.2",
+        "@eslint/js": "^10.0.1",
         "@types/chai": "^5.2.3",
         "@types/isomorphic-fetch": "^0.0.39",
         "@types/mocha": "^10.0.10",
