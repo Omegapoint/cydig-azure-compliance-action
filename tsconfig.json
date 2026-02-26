@@ -16,5 +16,5 @@
         "strict": true,
         "useUnknownInCatchVariables": false
     },
-    "exclude": ["./dist", "./node_modules", "./src"]
+    "exclude": ["./dist", "./node_modules"]
 }

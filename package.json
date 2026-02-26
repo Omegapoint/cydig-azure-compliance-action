@@ -19,11 +19,11 @@
         ".": "./dist/index.js"
     },
     "engines": {
-        "node": ">=16"
+        "node": ">=20.19.0"
     },
     "main": "dist/index.js",
     "scripts": {
-        "build": "ncc build src/index.ts",
+        "build": "tsc && rollup -c",
         "test": "tsc && mocha dist/tests/",
         "testScript": "tsc && mocha dist/tests/ --reporter xunit --reporter-option output=ResultsFile.xml",
         "prepare": "husky",
@@ -34,7 +34,7 @@
     },
     "license": "MIT",
     "dependencies": {
-        "@actions/core": "^2.0.0",
+        "@actions/core": "^3.0.0",
         "@azure/arm-authorization": "^9.0.0",
         "@azure/arm-compute": "^23.3.0",
         "@azure/arm-policy": "^6.0.0",
@@ -42,11 +42,13 @@
         "@azure/arm-security": "^5.0.0",
         "@azure/identity": "^4.7.0",
         "@microsoft/microsoft-graph-client": "^3.0.7",
-        "@vercel/ncc": "^0.38.3",
         "isomorphic-fetch": "^3.0.0"
     },
     "devDependencies": {
-        "@eslint/js": "^9.39.2",
+        "@eslint/js": "^10.0.1",
+        "@rollup/plugin-commonjs": "^29.0.0",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^16.0.3",
         "@types/chai": "^5.2.3",
         "@types/isomorphic-fetch": "^0.0.39",
         "@types/mocha": "^10.0.10",
@@ -54,10 +56,11 @@
         "@types/sinon": "^21.0.0",
         "@types/sinon-chai": "^4.0.0",
         "chai": "^6.2.2",
-        "eslint": "^9.39.2",
+        "eslint": "^10.0.1",
         "husky": "^9.1.7",
         "mocha": "^11.1.0",
         "prettier": "^3.8.1",
+        "rollup": "^4.0.0",
         "sinon": "^21.0.0",
         "sinon-chai": "^4.0.1",
         "typescript": "^5.9.3",
