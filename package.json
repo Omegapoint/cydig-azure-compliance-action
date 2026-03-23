@@ -40,7 +40,7 @@
         "@azure/arm-policy": "^6.0.0",
         "@azure/arm-policyinsights": "^5.0.0",
         "@azure/arm-security": "^5.0.0",
-        "@azure/identity": "^4.7.0",
+        "@azure/identity": "^4.13.1",
         "@microsoft/microsoft-graph-client": "^3.0.7",
         "isomorphic-fetch": "^3.0.0"
     },
